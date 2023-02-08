@@ -1,0 +1,1959 @@
+/* ###### utility ###### */
+:root {
+  --c1: #368951;
+  --c2: #1b5d3c;
+  --c3: #0a3327;
+}
+@font-face {
+  font-family: "RobotoMedium";
+  src: url("./fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald/static/Oswald-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OswaldBold";
+  src: url("./fonts/Oswald/Oswald-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Mont";
+  src: url("./fonts/Montserrat_Alternates/MontserratAlternates-Bold.ttf")
+    format("truetype");
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+/* body */
+body {
+  /* width: 1440px; */
+}
+
+/* watchBox */
+.watchBox {
+  padding: 12px 30px;
+  display: flex;
+}
+.watchBox .textBox {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.watchBox .textBox p {
+  font-size: 14px;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  /* font-weight: 700; */
+  margin-left: 25px;
+  font-weight: 500;
+  margin-top: 3px;
+  font-family: "RobotoMedium";
+}
+.watchBox .textBox p a {
+  color: var(--c1);
+  font-size: 14px;
+  font-family: "RobotoMedium";
+}
+.watchBox .cutaBox {
+  width: 25px;
+  height: 25px;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--c1);
+  border-radius: 50%;
+}
+.watchBox .cutaBox img {
+  width: 100%;
+  height: auto;
+}
+
+/* logoBox */
+.outerLogoBox {
+  background-color: var(--c3);
+  padding: 13px 0px;
+  background-image: url("./images/Slicing/pattern-bg.png");
+}
+.outerLogoBox .logoBox {
+  max-width: 1109px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.outerLogoBox .logoBox .btnBox {
+  margin-right: -10px;
+  display: flex;
+}
+.outerLogoBox .logoBox .btnBox .innerBtn {
+  position: relative;
+  margin-right: 10px;
+}
+.outerLogoBox .logoBox .btnBox .innerBtn span {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--c1);
+  z-index: 10;
+  transform: skewX(345deg);
+}
+.outerLogoBox .logoBox .btnBox .innerBtn:nth-child(2) span {
+  background-color: var(--c2);
+}
+
+.outerLogoBox .logoBox .btnBox a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0px 0px;
+  letter-spacing: 1.4px;
+  width: 150px;
+  display: inline-block;
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 6px 0px;
+  font-family: "Oswald";
+}
+.outerLogoBox .logoBox .innerLogoBox .burgerBox {
+  display: none;
+}
+
+/* navBox */
+.navBox {
+  background-color: var(--c2);
+  background-image: url("./images/Slicing/pattern-bg.png");
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  position: relative;
+}
+.innerNavBox {
+  max-width: 1109px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navBox .linkBox {
+  display: flex;
+}
+.navBox .linkBox .innerLinkBox {
+  position: relative;
+}
+.navBox .linkBox .innerLinkBox a {
+  text-decoration: none;
+  color: white;
+  z-index: 20;
+  position: relative;
+  padding: 19px 27px;
+  letter-spacing: 1.1px;
+  font-size: 17.5px;
+  font-weight: bold;
+  display: inline-block;
+  font-family: "Oswald";
+  margin-top: -5px;
+  margin-left: 5px;
+}
+.navBox .linkBox .innerLinkBox:nth-child(1) span {
+  background-color: var(--c1);
+}
+.navBox .linkBox .innerLinkBox:hover span {
+  background-color: var(--c1);
+}
+.navBox .linkBox .innerLinkBox span {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transform: skewX(345deg);
+}
+.searchBox {
+  padding: 8px 0px;
+}
+.searchBox .inputBox {
+  display: flex;
+  align-items: stretch;
+  width: 255px;
+  background-color: var(--c3);
+  background-image: url("./images/Slicing/pattern-bg.png");
+}
+.searchBox .inputBox input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Oswald";
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 10px;
+  margin-top: -3px;
+  margin-left: 6px;
+}
+.searchBox .inputBox input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.searchBox .inputBox .imgBox {
+  padding-top: 12px;
+  padding-right: 16px;
+}
+
+/* homeBox */
+.homeBoxOuter {
+  background-color: var(--c1);
+  background-image: url("./images/Slicing/pattern-bg.png");
+}
+.homeBox {
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.homeBox .leftBox {
+  flex: 1;
+  padding-left: 160px;
+}
+.homeBox .leftBox h1 {
+  font-size: 48px;
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Oswald";
+  padding: 12px 4px;
+}
+.homeBox .rightBox {
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.homeBox .rightBox::after {
+  content: "";
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transform: skewX(345deg) translateX(20px);
+  background-color: #fff;
+  z-index: 10;
+}
+.homeBox .rightBox .imgBox {
+  z-index: 20;
+  margin-right: 160px;
+  margin-top: 2px;
+}
+.homeBox .rightBox p {
+  z-index: 20;
+  font-size: 15px;
+  margin-right: 160px;
+  font-family: "Oswald";
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--c1);
+}
+
+/* heroSlider */
+.heroSlider {
+  /* height: 550px; */
+}
+.heroSlider .slider {
+  position: relative;
+  /* height: 550px; */
+}
+
+.heroSlider .slider .arrow {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  z-index: 10;
+}
+.heroSlider .slider .slick-prev.arrow {
+  position: absolute;
+  top: 264px;
+  left: 39px;
+}
+.heroSlider .slider .slick-next.arrow {
+  position: absolute;
+  top: 263px;
+  right: 36px;
+}
+.heroSlider .slideBox {
+  background-image: url("./images/Slicing/hero-bg.png");
+  height: 550px;
+  position: relative;
+}
+.heroSlider .slideBox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(2, 27, 2, 0.6);
+  background-image: url("./images/Slicing/pattern-bg.png");
+  z-index: 10;
+}
+.heroSlider .slideBox h1 {
+  position: absolute;
+  z-index: 20;
+  color: #fff;
+  font-size: 51px;
+  font-weight: bold;
+  font-family: "Oswald";
+  letter-spacing: 1px;
+  left: 231px;
+  top: 145px;
+  width: 404px;
+  line-height: 50px;
+}
+.heroSlider .slideBox p {
+  position: absolute;
+  z-index: 20;
+  color: #fff;
+  font-size: 21px;
+  line-height: 26px;
+  left: 232px;
+  top: 278px;
+  width: 482px;
+  text-align: justify;
+}
+
+.heroSlider .slideBox .bootImg {
+  position: absolute;
+  z-index: 20;
+  left: 829px;
+  top: 95px;
+}
+
+.heroSlider .slideBox .playBox {
+  position: absolute;
+  z-index: 20;
+  left: 965px;
+  top: 235px;
+  width: 85px;
+  height: 85px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heroSlider .slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.heroSlider .slick-dots li {
+  list-style: none;
+  display: inline-block;
+}
+.heroSlider .slick-dots li button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #999;
+  z-index: 20;
+}
+.heroSlider .slick-dots li button {
+  border: none;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  width: 20px;
+  height: 8px;
+  background-color: #fff;
+  margin-left: 10px;
+  z-index: 10;
+}
+.heroSlider .slick-dots li.slick-active button::after {
+  background-color: #fff;
+}
+
+/* rowBox */
+.rowBoxOuter {
+  background: var(--c3);
+  background-image: url("./images/Slicing/pattern-bg.png");
+}
+.rowBoxOuter .rowBox {
+  max-width: 1114px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 65px;
+}
+.rowBoxOuter .rowBox .leftBox {
+  width: 858px;
+  /* background-color: red; */
+}
+.rowBoxOuter .rowBox .rightBox {
+  flex: 1;
+  /* background-color: blue; */
+}
+
+.rowBoxOuter .leftBox .heroSlider2 {
+  height: auto;
+}
+/* .rowBoxOuter .leftBox .slider2 {
+  width: 788px;
+
+  height: 253px;
+  margin: 0px auto;
+  border-bottom: 1px solid #fff;
+} */
+.rowBoxOuter .leftBox .slider2 {
+  width: 826px;
+  height: 253px;
+  /* margin: 0px auto; */
+  border-bottom: 1px solid #fff;
+}
+
+.rowBoxOuter .leftBox .slider2 .slideBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 194px;
+  /* height: 194px; */
+  /* width: 200px;
+    position: relative;
+    border: 2px solid var(--c2);
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+  /* padding: 5px;
+    background-color: var(--c2);
+    background-image: url('./images/Slicing/pattern-bg.png'); */
+}
+.rowBoxOuter .leftBox .slider2 .slideBox .imgBox {
+  padding: 10px;
+  background-color: var(--c2);
+  background-image: url("./images/Slicing/pattern-bg.png");
+}
+
+.rowBoxOuter .leftBox .slider2 .arrow {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  z-index: 10;
+}
+.rowBoxOuter .leftBox .slider2 .slick-prev.arrow {
+  position: absolute;
+  top: 80px;
+  left: -20px;
+}
+.rowBoxOuter .leftBox .slider2 .slick-next.arrow {
+  position: absolute;
+  top: 80px;
+  right: -20px;
+}
+.rowBoxOuter .leftBox .slider2 .slick-dots {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.rowBoxOuter .leftBox .slider2 .slick-dots li {
+  list-style: none;
+  display: inline-block;
+}
+.rowBoxOuter .leftBox .slider2 .slick-dots li button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #999;
+}
+.rowBoxOuter .leftBox .slider2 .slick-dots li button {
+  border: none;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  width: 15px;
+  height: 6px;
+  background-color: #fff;
+  margin-left: 10px;
+}
+.rowBoxOuter .leftBox .slider2 .slick-dots li.slick-active button::after {
+  background-color: #fff;
+}
+
+/* eventBox */
+.eventBox {
+  background-color: var(--c1);
+  width: 256px;
+  margin: 17px auto;
+  padding-bottom: 30px;
+}
+.eventBox .header {
+  background-color: var(--c2);
+  background-image: url('./images/Slicing/pattern-bg.png');
+
+  padding: 9px 18px;
+}
+.eventBox .header h2 {
+  font-size: 21px;
+  font-family: "Oswald";
+  color: #fff;
+}
+.eventBox .listBox {
+  display: flex;
+  padding: 0px 19px;
+  padding-top: 16px;
+}
+.eventBox .listBox .firstBox .numBox {
+    background: #fff;
+    /* padding: 4px 19px; */
+    width: 46px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eventBox .listBox .firstBox .numBox p {
+  font-size: 26px;
+  font-weight: bold;
+  font-family: "Oswald";
+
+}
+.eventBox .listBox .secondBox {
+  padding: 0px 11px;
+}
+.eventBox .listBox .secondBox h4 {
+    font-size: 19px;
+    font-family: "Oswald";
+    color: #fff;
+}
+.eventBox .listBox .secondBox p {
+    font-size: 15px;
+    font-family: "Oswald";
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+/* cardBox */
+.cardBoxOuter{
+  margin-top: 42px;
+}
+.cardBox .card {
+  width: 255px;
+  background-color: var(--c1);
+  background-image: url('./images/Slicing/pattern-bg.png');
+
+  display: flex;
+  flex-direction: column;
+
+}
+.cardBox .card:not(:nth-child(1)){
+  margin-left: 32px;
+}
+.cardBox {
+  display: flex;
+}
+.cardBox .textBox{
+  padding: 9px 12px;
+}
+.cardBox .textBox h2{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Oswald';
+  line-height: 25px;
+  letter-spacing: 0.4px;
+}
+.cardBox .textBox p{
+  font-size: 3.5px;
+  color: #fff;
+  font-family: 'Oswald';
+  padding: 6px 0px;
+  padding-bottom: 18px;
+  font-size: 17px;
+  line-height: 19px;
+}
+.cardBox .linkBox{
+  /* height: 300px; */
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cardBox .linkBox a{
+
+  color: #fff;
+  font-size: 22px;
+  font-family: 'Oswald';
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--c2);
+  background-image: url('./images/Slicing/pattern-bg.png');
+
+  padding: 7px 0px;
+  width: 100%;
+}
+
+/* longCardBoxOuter */
+.longCardBoxOuter{
+  margin-top: 38px;
+  padding-bottom: 80px;
+
+}
+
+.longCardBox{
+  background-color:var(--c1);
+  background-image: url('./images/Slicing/pattern-bg.png');
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 829px;
+  height: 238px;
+}
+.longCardBox .textBox{
+  flex:1;
+  padding: 61px 20px;
+}
+.longCardBox .textBox h2{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Oswald';
+  line-height: 25px;
+  letter-spacing: 0.4px;
+}
+.longCardBox .textBox p{
+  font-size: 3.5px;
+  color: #fff;
+  font-family: 'Oswald';
+  padding: 6px 0px;
+  padding-bottom: 18px;
+  font-size: 17px;
+  line-height: 19px;
+}
+.longCardBox .imgBox{
+  width: 507px;
+  height: 100%;
+  -webkit-clip-path: polygon(0% 0%,100% 0%,85% 100%,0% 100%);
+  clip-path: polygon(0% 0%,100% 0%,85% 100%,0% 100%);
+  overflow: hidden;
+}
+.longCardBox .imgBox img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.longCardBox2 {
+  flex-direction: row-reverse;
+  background-color:var(--c2);
+
+}
+.longCardBox2 .imgBox{
+  width: 496px;
+  height: 100%;
+  -webkit-clip-path: polygon(0% 0%,100% 0%,100% 100%,12% 100%);
+  clip-path: polygon(0% 0%,100% 0%,100% 100%,12% 100%);
+  overflow: hidden;
+}
+.longCardBox2 .textBox{
+  flex: 1;
+  padding: 62px 32px;
+}
+
+/* formBox */
+.formBox{
+  background-color: var(--c2);
+  background-image: url('./images/Slicing/pattern-bg.png');
+
+}
+.formBox h1{
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Oswald';
+  color: #fff;
+  padding: 0px 0px;
+  padding-top: 28px;
+}
+.formBox .formBoxInner{
+  max-width:542px;
+  margin:0px auto;
+  padding-bottom: 40px;
+}
+.formBox .twoInputBox{
+  padding-top: 13px;
+
+}
+.formBox p{
+  font-size: 18px;
+  font-family: 'Oswald';
+  color: #fff;
+  padding: 0px 0px;
+}
+.formBox .twoInputBox {
+  display: flex;
+}
+.formBox .twoInputBox input{
+  color: var(--c3);
+  margin-top: 3px;
+  padding: 0px 10px;
+  width: 256px;
+  height: 39px;
+   font-weight: bold;
+  color: #555;
+}
+.formBox .twoInputBox .inputBox:nth-child(2){
+  margin-left: 29px;
+}
+.formBox .twoInputBox input::placeholder{
+  color: var(--c3);
+  font-weight: bold;
+  color: #555;
+}
+
+.formBox .twoSelectBox {
+  display: flex;
+    margin-top: 13px;
+}
+.formBox .twoSelectBox .selectOuter{
+  position: relative;
+}
+.formBox .twoSelectBox .selectOuter .iconBox{
+  position: absolute;
+  right: 4px;
+  top: 6px;
+  background-color: #fff;
+  width: 25px;
+  height: 20px;
+  overflow: hidden;
+}
+.formBox .twoSelectBox .selectOuter .iconBox svg{
+  width: 25px;
+  height: 30px;
+}
+.formBox .twoSelectBox select{
+  margin-top: 3px;
+  padding: 0px 10px;
+  width: 256px;
+  height: 39px;
+  font-weight: bold;
+  color: #555;
+
+}
+.formBox .twoSelectBox .inputBox:nth-child(2){
+  margin-left: 29px;
+}
+
+.radioOuterBox{
+  margin-top: 12px;
+}
+.radioOuterBox .radioInnerBox{
+  margin-top: 12px;
+}
+.radioOuterBox .radioBox{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.radioOuterBox .radioBox label{
+  font-size: 15px;
+}
+.radioOuterBox .radioBox .customRadio{
+position: relative;
+width: 20px;
+height: 20px;
+display: inline-block;
+margin-right: 5px;
+/* background: red; */
+}
+.radioOuterBox .radioBox label{
+  color: #fff;
+}
+.radioOuterBox .radioBox .customRadio input{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  }
+  .radioOuterBox .radioBox .customRadio input:checked ~ .radio2{
+    opacity: 1;
+  }
+.radioOuterBox .radioBox .customRadio .radio1{
+position: absolute;
+width:100%;
+height: 100%;
+background: blue;
+border-radius: 50%;
+background: #fff;
+
+}
+.radioOuterBox .radioBox .customRadio .radio2{
+  opacity: 0;
+  position: absolute;
+  width: 65%;
+  height: 65%;
+  background: var(--c3);
+  border-radius: 50%;
+  margin-top: 3.4px;
+  margin-left: 3.5px;
+}
+
+/* areaBox */
+.areaBox{
+  margin-top: 12px;
+}
+.areaBox textarea{
+  width: 100%;
+  height: 91px;
+  padding: 13px 10px;
+}
+.formBox .submitBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.formBox .submitBox button{
+  padding: 7px 59px;
+  border: none;
+  outline: none;
+  background: var(--c3);
+  color: #fff;
+  font-family: 'Oswald';
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* footerBox */
+.footerBox{
+  padding: 10px 10px;
+  background: var(--c3);
+  background-image: url('./images/Slicing/pattern-bg.png');
+}
+.footerBox .linkBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 446px;
+  margin: 0px auto;
+  margin-top: 19px;
+}
+.footerBox .linkBox .innerLinkBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerBox .linkBox .innerLinkBox a,.footerBox .linkBox .innerLinkBox p{
+  font-size: 16px;
+  font-family: 'Oswald';
+  font-weight: bold;
+  color:#fff;
+  text-decoration: none;
+}
+
+.footerBox .socialBox{
+  width:600px;
+}
+.footerBox .socialBox{
+  width: 129px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 17px;
+}
+.copyBox p{
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Oswald';
+  font-weight: 100;
+  margin-top: 12px;
+}
+
+
+
+
+/* ####################### */
+/* ####################### */
+/* ####################### */
+
+
+/* ########### Tablet######### */
+@media (max-width: 1200px) {
+  /* watchBox */
+  .watchBox {
+    padding: 12px 14px;
+  }
+  .watchBox .textBox p {
+    font-size: 14px;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    margin-left: 25px;
+    margin-top: 4px;
+    font-family: "RobotoMedium";
+  }
+
+  /* logoBox */
+  .outerLogoBox {
+    background-color: var(--c3);
+    padding: 10px 0px;
+  }
+  .outerLogoBox .logoBox {
+    max-width: 953px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .outerLogoBox .logoBox .btnBox a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 0px 0px;
+    letter-spacing: 1.4px;
+    width: 150px;
+    display: inline-block;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 9px 0px;
+    font-family: "Oswald";
+  }
+  .outerLogoBox .logoBox .innerLogoBox img {
+    width: 140px;
+    margin-top: 5px;
+  }
+  /* navBox */
+  .innerNavBox {
+    max-width: 947px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navBox .linkBox .innerLinkBox a {
+    text-decoration: none;
+    color: white;
+    font-family: "Oswald";
+    z-index: 20;
+    position: relative;
+    padding: 13px 16px;
+    font-size: 14.5px;
+    margin-top: 5px;
+    margin-right: 6px;
+    display: inline-block;
+  }
+  .searchBox .inputBox input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: "Oswald";
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 10px;
+    margin-top: -2px;
+    margin-left: 7px;
+  }
+  /* homeBox */
+
+  .homeBox {
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .homeBox .leftBox {
+    flex: 1;
+    padding-left: 9px;
+  }
+  .homeBox .leftBox h1 {
+    font-size: 38px;
+    color: white;
+    letter-spacing: 2px;
+    font-family: "Oswald";
+    /* padding: 12px 5px; */
+    padding-top: 12px;
+    padding-left: 4px;
+    margin-top: -2px;
+  }
+
+  .homeBox .rightBox {
+    width: 357px;
+  }
+  .homeBox .rightBox::after {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transform: skewX(345deg) translateX(20px);
+    background-color: #fff;
+    z-index: 10;
+  }
+  .homeBox .rightBox .imgBox {
+    z-index: 20;
+    margin-right: -6px;
+    margin-top: 2px;
+  }
+  .homeBox .rightBox p {
+    z-index: 20;
+    font-size: 13px;
+    margin-right: -6px;
+    letter-spacing: 0.8px;
+    padding-top: 3px;
+    font-family: "Oswald";
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: var(--c1);
+  }
+
+  /* heroSlider */
+  .heroSlider .slider {
+    position: relative;
+    /* height: 550px; */
+  }
+
+  .heroSlider .slider .arrow {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    z-index: 10;
+    display: none !important;
+  }
+  .heroSlider .slider .slick-prev.arrow {
+    position: absolute;
+    top: 264px;
+    left: 39px;
+  }
+  .heroSlider .slider .slick-next.arrow {
+    position: absolute;
+    top: 263px;
+    right: 36px;
+  }
+  .heroSlider .slideBox {
+    background-image: url("./images/Slicing/hero-bg.png");
+    height: 450px;
+    position: relative;
+  }
+  .heroSlider .slideBox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(2, 27, 2, 0.6);
+    background-image: url("./images/Slicing/pattern-bg.png");
+    z-index: 10;
+  }
+  .heroSlider .slideBox h1 {
+    position: absolute;
+    z-index: 20;
+    color: #fff;
+    font-size: 37px;
+    font-weight: bold;
+    font-family: "Oswald";
+    letter-spacing: 1px;
+    left: 17px;
+    top: 91px;
+    width: 404px;
+    line-height: 50px;
+  }
+  .heroSlider .slideBox p {
+    position: absolute;
+    z-index: 20;
+    color: #fff;
+    font-size: 21px;
+    line-height: 26px;
+    left: 14px;
+    top: 207px;
+    width: 479px;
+    text-align: justify;
+  }
+
+  .heroSlider .slideBox .bootImg {
+    position: absolute;
+    z-index: 20;
+    left: 580px;
+    top: 56px;
+    width: 286px;
+  }
+
+  .heroSlider .slideBox .playBox {
+    left: 693px;
+    top: 157px;
+  }
+  .heroSlider .slick-dots {
+    position: absolute;
+    bottom: 31px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .heroSlider .slick-dots li {
+    list-style: none;
+    display: inline-block;
+  }
+  .heroSlider .slick-dots li button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #999;
+  }
+  .heroSlider .slick-dots li button {
+    border: none;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    width: 20px;
+    height: 8px;
+    background-color: #fff;
+    margin-left: 10px;
+  }
+  .heroSlider .slick-dots li.slick-active button::after {
+    background-color: #fff;
+  }
+
+
+/* rowBox */
+.rowBoxOuter .rowBox {
+  max-width: 1114px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 44px;
+}
+.rowBoxOuter .rowBox .leftBox {
+   width: 700px;
+    /* background-color: red; */
+  }
+  .rowBoxOuter .rowBox .rightBox {
+    flex: 1;
+    /* background-color: blue; */
+  }
+
+  .rowBoxOuter .leftBox .slider2 {
+    width: 650px;
+    height: 289px;
+    /* background-color: red; */
+    margin: 0px auto;
+    border-bottom: 1px solid #fff;
+  }
+  /* slider2 */
+  .rowBoxOuter .leftBox .slider2 .slick-dots {
+    position: absolute;
+    bottom: 29px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+/* cardBox */
+.cardBox {
+  flex-wrap: wrap;
+  padding: 0px 14px;
+}
+.cardBox .card{
+  width:309px;
+}
+.cardBox .card:last-child {
+  margin-left: 0px;
+  margin-top: 36px;
+}
+.cardBox .card img{
+  width:100%;
+  height: 160px;
+  object-fit: cover;
+}
+.cardBox .linkBox {
+  /* height: 300px; */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 15px;
+}
+
+
+
+/* longCardBoxOuter */
+.longCardBoxOuter{
+  margin-top: 38px;
+}
+
+.longCardBox{
+  background-color:var(--c1);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 649px;
+  height: 238px;
+  margin: 0px 15px;
+}
+.longCardBox .textBox{
+  flex:1;
+  padding: 61px 20px;
+}
+.longCardBox .textBox h2{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Oswald';
+  line-height: 25px;
+  letter-spacing: 0.4px;
+}
+.longCardBox .textBox p{
+  font-size: 3.5px;
+  color: #fff;
+  font-family: 'Oswald';
+  padding: 6px 0px;
+  padding-bottom: 18px;
+  font-size: 17px;
+  line-height: 19px;
+}
+.longCardBox .imgBox{
+
+  width: 331px;
+  height: 100%;
+  -webkit-clip-path: polygon(0% 0%,100% 0%,85% 100%,0% 100%);
+  clip-path: polygon(0% 0%,100% 0%,85% 100%,0% 100%);
+  overflow: hidden;
+
+}
+.longCardBox .imgBox img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.longCardBox2 {
+  flex-direction: row-reverse;
+}
+.longCardBox2 .imgBox{
+  width: 337px;
+  height: 100%;
+  -webkit-clip-path: polygon(0% 0%,100% 0%,100% 100%,12% 100%);
+  clip-path: polygon(0% 0%,100% 0%,100% 100%,18% 100%);
+  overflow: hidden;
+}
+.longCardBox .textBox {
+  flex: 1;
+  padding: 66px 35px;
+}
+
+/* formBox */
+.formBox h1 {
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Oswald';
+  color: #fff;
+  padding: 0px 0px;
+  padding-top: 12px;
+}
+/* footerBox */
+/* .footerBox{
+  padding: 10px 10px;
+  background: var(--c1);
+} */
+.footerBox .linkBox {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 292px;
+    margin: 0px auto;
+    margin-top: 19px;
+}
+.footerBox .linkBox .spaceSlash{
+  margin: 0px 10px;
+}
+
+
+
+
+
+
+
+
+
+}
+
+@media (max-width: 768px) {
+  /* heroSLider */
+  .heroSlider .slideBox .bootImg {
+    position: absolute;
+    z-index: 20;
+    left: 506px;
+    top: 56px;
+    width: 286px;
+}
+.heroSlider .slideBox .playBox {
+  left: 602px;
+    top: 157px;
+}
+  /* logoBox */
+  .outerLogoBox .logoBox {
+    max-width: 953px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+/* navBox */
+.innerNavBox {
+  padding: 0px 20px;
+}
+.navBox .linkBox .innerLinkBox a {
+  text-decoration: none;
+  color: white;
+  font-family: "Oswald";
+  z-index: 20;
+  position: relative;
+  padding: 13px 10px;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-right: 6px;
+  display: inline-block;
+}
+/* cardBox */
+.cardBox {
+  flex-wrap: wrap;
+  padding: 0px 25px;
+}
+  /* rowBox */
+.rowBoxOuter .rowBox {
+  max-width: 1114px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 44px;
+}
+.rowBoxOuter .rowBox .leftBox {
+   width: 700px;
+    /* background-color: red; */
+  }
+  .rowBoxOuter .rowBox .rightBox {
+    flex: 1;
+    /* background-color: blue; */
+  }
+  
+}
+
+/* ####################### */
+/* ####################### */
+/* ####################### */
+
+
+
+
+/* ########### Mobile######### */
+
+@media (max-width: 500px) {
+  /* watchBox */
+  .watchBox {
+    padding: 15px 14px;
+  }
+  .watchBox .textBox {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .watchBox .textBox p {
+    font-size: 12px;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    margin-left: 1px;
+    margin-top: 0px;
+    line-height: 21px;
+    font-family: "RobotoMedium";
+  }
+  .watchBox .textBox p a {
+    font-size: 12px;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    margin-left: 1px;
+    margin-top: 0px;
+    line-height: 21.5px;
+    font-family: "RobotoMedium";
+  }
+
+  .watchBox .cutaBox {
+    margin-top: 9px;
+  }
+  /* logoBox */
+  .outerLogoBox {
+    background-color: var(--c3);
+    /* padding: 10px 0px; */
+    padding: 0px 0px;
+  }
+  .outerLogoBox .logoBox {
+    max-width: none;
+    margin: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 0px;
+  }
+
+  .outerLogoBox .logoBox .innerLogoBox .imgBox img {
+    width: 92px;
+    width: 92px;
+    margin-top: 18px;
+    margin-left: 15px;
+  }
+
+  .outerLogoBox .logoBox .innerLogoBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: none;
+    margin: 0px 0px;
+    padding-bottom: 14px;
+  }
+  .outerLogoBox .logoBox .innerLogoBox .burgerBox {
+    width: 24px;
+    display: block;
+  }
+  .outerLogoBox .logoBox .innerLogoBox .burgerBox img {
+    width: 100%;
+    margin-top: 18px;
+    margin-left: -15px;
+  }
+  .outerLogoBox .logoBox .btnBox .innerBtn {
+    position: relative;
+    margin-right: 0px;
+    flex: 1;
+  }
+  .outerLogoBox .logoBox .btnBox a {
+    padding: 10px 0px;
+    width: auto;
+    height: initial;
+    background-color: var(--c1);
+    font-family: "Oswald";
+    margin: 0px 0px;
+    background-image: url("./images/Slicing/pattern-bg.png");
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  .outerLogoBox .logoBox .btnBox .innerBtn:nth-child(2) a {
+    border-left: 1px solid #fff;
+    margin-left: 0px;
+  }
+  .outerLogoBox .logoBox .btnBox .innerBtn span {
+    display: none;
+  }
+
+  .outerLogoBox .logoBox .btnBox {
+    margin-right: 0px;
+    display: flex;
+    margin: 0px;
+  }
+  /* navBox */
+  .navBox {
+    display: none;
+  }
+  .navBox.navShow {
+    display: block;
+  }
+  .innerNavBox {
+    max-width: 947px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .navBox .linkBox {
+    flex-direction: column;
+    margin: 11px 14px;
+  }
+
+  .navBox .linkBox .innerLinkBox {
+    width: 134px;
+    overflow-x: hidden;
+  }
+  .navBox .linkBox .innerLinkBox span {
+    transform: translateX(-10px) skewX(345deg);
+  }
+  .outerLogoBox .logoBox .btnBox .innerBtn:nth-child(2) a {
+    background-color: var(--c2);
+  }
+  /* .navBox .linkBox .innerLinkBox:nth-child(1) a{
+    background-color: var(--c1);
+} */
+  .navBox .linkBox .innerLinkBox a {
+    text-decoration: none;
+    color: white;
+    font-family: "Oswald";
+    z-index: 20;
+    position: relative;
+    padding: 22px 17px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: -6px;
+    display: inline-block;
+  }
+
+  .searchBox .inputBox {
+    display: flex;
+    align-items: stretch;
+    width: 343px;
+    background-color: var(--c3);
+    margin: 0px auto;
+    margin-top: 0px;
+  }
+  .searchBox .inputBox .imgBox {
+    padding: 11px 9px;
+  }
+
+  .searchBox .inputBox input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: "Oswald";
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0px 10px;
+    margin-top: -2px;
+    margin-left: 0px;
+  }
+
+  /* homeBox */
+
+  .homeBox {
+    display: none;
+  }
+
+  /* heroSlider */
+  .heroSlider .slider {
+    position: relative;
+    /* height: 550px; */
+  }
+
+  .heroSlider .slider .arrow {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    z-index: 10;
+    display: none !important;
+  }
+  .heroSlider .slider .slick-prev.arrow {
+    position: absolute;
+    top: 264px;
+    left: 39px;
+  }
+  .heroSlider .slider .slick-next.arrow {
+    position: absolute;
+    top: 263px;
+    right: 36px;
+  }
+  .heroSlider .slideBox {
+    background-image: url("./images/Slicing/hero-bg.png");
+    background-position: bottom;
+    height: 550px;
+    position: relative;
+  }
+  .heroSlider .slideBox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(2, 27, 2, 0.6);
+    background-image: url("./images/Slicing/pattern-bg.png");
+
+    z-index: 10;
+  }
+  .heroSlider .slideBox h1 {
+    position: absolute;
+    z-index: 20;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Oswald";
+    letter-spacing: 1px;
+    left: 15px;
+    top: 257px;
+    width: 404px;
+    line-height: 39px;
+  }
+  .heroSlider .slideBox p {
+    position: absolute;
+    z-index: 20;
+    color: #fff;
+    font-size: 15px;
+    line-height: 23px;
+    left: 15px;
+    top: 348px;
+    width: 319px;
+    text-align: justify;
+  }
+
+  .heroSlider .slideBox .bootImg {
+    position: absolute;
+    z-index: 20;
+    left: 457px;
+    top: 29px;
+    width: 197px;
+  }
+
+  .heroSlider .slideBox .playBox {
+    position: absolute;
+    z-index: 20;
+    left: 533px;
+    top: 100px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .heroSlider .slideBox .playBox img {
+    width: 20px;
+  }
+  .heroSlider .slick-dots {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .heroSlider .slick-dots li {
+    list-style: none;
+    display: inline-block;
+  }
+  .heroSlider .slick-dots li button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #999;
+  }
+  .heroSlider .slick-dots li button {
+    border: none;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    width: 20px;
+    height: 8px;
+    background-color: #fff;
+    margin-left: 10px;
+  }
+  .heroSlider .slick-dots li.slick-active button::after {
+    background-color: #fff;
+  }
+
+/* rowBox */
+.rowBoxOuter .rowBox {
+  max-width: 100%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 44px;
+}
+.rowBoxOuter .rowBox .leftBox {
+   width: 100%;
+    /* background-color: red; */
+  }
+  .rowBoxOuter .rowBox .rightBox {
+    flex: none;
+   width: 100%;
+
+    /* background-color: blue; */
+  }
+
+  .rowBoxOuter .leftBox .heroSlider2{
+    height: auto;
+    margin:0px 20px;
+  }
+  .rowBoxOuter .leftBox .slider2 {
+    width: 100%;
+    height: 408px;
+    /* background-color: red; */
+    margin: 0px auto;
+    border-bottom: 1px solid #fff;
+  }
+  .rowBoxOuter .leftBox .slider2 .slideBox{
+    height: 343px;
+  }
+  .rowBoxOuter .leftBox .slider2 .imgBox{
+    width: 100%;
+    height: 100%;
+  }
+  .rowBoxOuter .leftBox .slider2 .slideBox img{
+    width: 100%;
+    height: 100%;
+  }
+  .rowBoxOuter .leftBox .slider2 .slick-dots {
+    position: absolute;
+    bottom: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* eventBox */
+.eventBox {
+  background-color: var(--c1);
+  width: 343px;
+  margin: 0px auto;
+  margin-top:-32px ;
+  margin-bottom: 50px;
+
+}
+
+
+
+/* cardBox */
+.cardBoxOuter {
+  margin-top: 10px;
+}
+.cardBox {
+  flex-wrap: wrap;
+  padding: 0px 15px;
+}
+
+.cardBox .card{
+  width:100%;
+  margin:0px !important;
+  margin-top: 20px !important;
+}
+
+.cardBox .card img{
+  width:100%;
+  height: 160px;
+  object-fit: cover;
+}
+.cardBox .linkBox {
+  /* height: 300px; */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 0px;
+}
+
+
+
+/* longCardBoxOuter */
+.longCardBoxOuter{
+  margin-top: 19px;
+}
+
+.longCardBox{
+  background-color: var(--c1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 347px;
+  height: 324px;
+  margin: 0px 14px;
+}
+.longCardBox .textBox{
+  flex: 1;
+  padding: 10px 10px;
+  padding-top: 20px;
+  margin-bottom: -11px;
+}
+.longCardBox .textBox h2{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Oswald';
+  line-height: 25px;
+  letter-spacing: 0.4px;
+}
+.longCardBox .textBox p{
+  font-size: 3.5px;
+  color: #fff;
+  font-family: 'Oswald';
+  padding: 6px 0px;
+  padding-bottom: 18px;
+  font-size: 17px;
+  line-height: 19px;
+}
+.longCardBox .imgBox{
+
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: none;
+  clip-path: none;
+  overflow: hidden;
+
+}
+.longCardBox .imgBox img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.longCardBox2 {
+  flex-direction: column;
+}
+.longCardBox2 .imgBox{
+ 
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: none;
+  clip-path: none;
+  overflow: hidden;
+}
+
+/* formBox */
+.formBox .formBoxInner{
+  max-width:542px;
+  margin:0px 15px;
+}
+.formBox .twoInputBox {
+  display: flex;
+  flex-direction: column;
+}
+.formBox .twoInputBox .inputBox:nth-child(2) {
+  margin-left: 0px;
+  margin-top: 12px;
+
+}
+.formBox .twoSelectBox {
+  display: flex;
+  flex-direction: column;
+}
+.formBox .twoSelectBox .inputBox:nth-child(1) {
+  margin-top: -13px;
+}
+.formBox .twoSelectBox .inputBox:nth-child(2) {
+  margin-left: 0px;
+  margin-top: 12px;
+}
+.formBox .twoInputBox input {
+  color: var(--c3);
+  margin-top: 3px;
+  padding: 0px 10px;
+  width: 100%;
+  height: 39px;
+  font-weight: bold;
+  color: #555;
+}
+.formBox .twoSelectBox select {
+  color: var(--c3);
+  margin-top: 3px;
+  padding: 0px 10px;
+  width: 100%;
+  height: 39px;
+  font-weight: bold;
+  color: #555;
+}
+.formBox h1 {
+  text-align: center;
+  font-size: 26px;
+  font-family: 'Oswald';
+  color: #fff;
+  padding: 0px 0px;
+  padding-top: 30px;
+}
+.formBox .twoSelectBox {
+  display: flex;
+  margin-top: 26px;
+}
+
+
+}
+@media (max-width: 360px) {
+    /* heroBox */
+    .heroSlider .slideBox .bootImg {
+      position: absolute;
+      z-index: 20;
+      left: 462px;
+      top: 49px;
+      width: 197px;
+  }
+  .heroSlider .slideBox .playBox {
+    position: absolute;
+    z-index: 20;
+    left: 521px;
+    top: 117px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* longCardBox */
+  .longCardBox {
+    background-color: var(--c1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 330px;
+    height: 324px;
+    margin: 0px 14px;
+}
+}
+@media (max-width: 499px) {
+  /* heroBox */
+  .heroSlider .slideBox .bootImg {
+    position: absolute;
+    z-index: 20;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 49px;
+    width: 197px;
+}
+.heroSlider .slideBox .playBox {
+  position: absolute;
+  z-index: 20;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 117px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* longCardBox */
+  .longCardBox {
+    background-color: var(--c1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 92%;
+    height: 324px;
+    margin: 0px 14px;
+}
+
+}
